@@ -2,7 +2,7 @@ package producerConsumer;
 
 import io.reactivex.subscribers.DefaultSubscriber;
 
-public class consumerImpl extends DefaultSubscriber<payload> {
+public class ConsumerImpl extends DefaultSubscriber<payload> implements Consumer{
 
 
     @Override

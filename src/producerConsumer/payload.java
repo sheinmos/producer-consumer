@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * a payload POJO for data payload between  the
- *  consumer and producer
+ *  Consumer and Producer
  */
 public class payload implements Serializable{
 

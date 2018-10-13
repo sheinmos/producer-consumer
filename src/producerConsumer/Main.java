@@ -11,20 +11,20 @@ import java.util.Collection;
  */
 public class Main {
     public static void main(String[] args) throws Exception {
-        testConsumer(new payload());
+        testConsumer();
     }
 
-    private static void testConsumer(payload ...  data)
+    private static void testConsumer()
     {
 
-        //producer
-        Observable<payload> observable = Observable.fromArray(data);
-        Observable<String> observable2 = Observable.just("how2", "to2", "do2", "in2", "java2");
-        //consumerImpl
+        //Producer
+
+        Observable<String> observable = Observable.just("how2", "to2", "do2", "in2", "java2");
+        //ConsumerImpl
         Consumer<? super String> consumer = System.out::println;
 
-        //Attaching producer to consumerImpl
-        observable.subscribe((Consumer<? super payload>) consumer);
+        //Attaching Producer to ConsumerImpl
+        observable.subscribe((Consumer<? super String>) consumer);
 
     }
 }
